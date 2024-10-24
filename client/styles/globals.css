@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Note: The styles for this gradient grid background is heavily inspired by the creator of this amazing site (https://dub.sh) – all credits go to them! 
+*/
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.request-log {
+  color: blue;
+}
+.response-log {
+  color: green;
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+.transition-image {
+  transition: transform 0.5s ease;
+}
+
+.zoom-out {
+  transform: scale(0.8); /* Adjust the scale as needed */
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+.font-mont {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+.yellow_btn {
+  @apply rounded-[8px] border border-yellow-400 bg-yellow-400 py-2 px-5 text-black transition-all hover:bg-white text-center text-sm flex items-center justify-center font-mont cursor-pointer;
+}
+
+.outline_btn {
+  @apply rounded-[8px] border border-yellow-400 bg-white hover:bg-yellow-400 py-2 px-5  text-black transition-all  text-center text-sm flex items-center justify-center;
+}
+
+.head_text {
+  @apply text-xl font-semibold leading-[1.15] text-black sm:text-2xl tracking-normal font-mont;
+  /* text-2xl-semibold  mb-[8px] */
+}
+
+.head_para {
+  @apply text-sm sm:text-base tracking-normal font-inter;
+}
+
+.label {
+  @apply text-sm text-slate-700 font-inter;
+}
+
+.input {
+  @apply text-sm text-slate-600 rounded-[6px] border-slate-300 font-sans;
+}
+
+.error_log {
+  @apply text-red-600 text-sm font-mont;
+}
+
+.card {
+  @apply w-auto bg-white  rounded-xl;
+}
+
+.outer_card {
+  @apply p-[12px] rounded-xl;
+
+  /* style={{
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backdropFilter: "blur(14px)",
+  }}; */
+}
+
+.orange_gradient {
+  @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
+}
+
+.green_gradient {
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl max-w-2xl;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-200 bg-white py-2.5 pl-5 pr-12 text-sm shadow-lg font-medium focus:border-black focus:outline-none focus:ring-0;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/10 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-200 bg-white/20 shadow-[inset_10px_-50px_94px_0_rgb(199,199,199,0.2)] backdrop-blur p-5;
+}
+
+.prompt_layout {
+  @apply space-y-6 py-8 sm:columns-2 sm:gap-6 xl:columns-3;
+}
+
+/* Feed Component */
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+/* Form Component */
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-500 outline-0;
+}
+
+/* Nav Component */
+.logo_text {
+  @apply max-sm:hidden font-semibold text-lg text-black tracking-wide;
+}
+
+.nav_menu {
+  @apply hover:text-yellow-400;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-8 bg-slate-900 border border-slate-800 rounded-2xl min-w-[210px] flex flex-col items-center gap-2 justify-end;
+}
+
+.dropdown_link {
+  @apply text-sm text-gray-700 hover:text-gray-500 font-medium;
+}
+
+/* PromptCard Component */
+.prompt_card {
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-300 bg-white/20 bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.flex-start {
+  @apply flex justify-start items-start;
+}
+
+.flex-end {
+  @apply flex justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
